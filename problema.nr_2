@@ -1,0 +1,36 @@
+    import java.util.Scanner;
+
+     class Main2 {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Introduceti numarul de 3 cifre : ");
+            int n = scanner.nextInt();
+
+            int sute = n / 100;
+            int zeci = (n / 10) % 10;
+            int unitati = n % 10;
+            int k = 0; // contor pentru cifre impare
+
+            System.out.print("Cifre impare: ");
+
+            if (sute % 2 != 0) {
+                System.out.print(sute + " ");
+                k++;
+            }
+            if (zeci % 2 != 0) {
+                System.out.print(zeci + " ");
+                k++;
+            }
+            if (unitati % 2 != 0) {
+                System.out.print(unitati + " ");
+                k++;
+            }
+
+            if (k == 0) {
+                System.out.println("Nu exista cifre impare.");
+            } else {
+                System.out.println();
+                System.out.println("Numarul de cifre impare este: " + k);
+            }
+        }
+    }
